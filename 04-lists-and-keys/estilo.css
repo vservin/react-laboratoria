@@ -1,0 +1,44 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+p, h1, h3 {
+  margin: 0;
+}
+.ordenes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.ordenes > .orden {
+  padding: 1rem;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  border: 1px solid gray;
+  border-top: 0.25rem solid teal;
+  cursor: pointer;
+}
+.ordenes > .orden:hover {
+  background-color: darkslategrey;
+  color: aliceblue;
+}
+.ordenes > .orden .cantidad {
+  margin: 1rem;
+}
+.ordenes > .orden .cantidad h1 {
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: teal;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
+.ordenes > .orden small {
+  display: block;
+  margin-top: 0.5rem;
+}
