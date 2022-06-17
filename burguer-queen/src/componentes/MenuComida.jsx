@@ -4,8 +4,8 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-
 import Productos from "./Productos";
+import estilos from "./MenuComida.module.css";
 
 const MenuComida = () => {
   const [activeTab, setActiveTab] = useState("1");
@@ -46,7 +46,10 @@ const MenuComida = () => {
             <TabPanel value="2">Almuerzo y Cena</TabPanel>
             <Box>
                 {Object.entries(productsToBuy).map(([key, { titulo, cantidad}]) => (
-                  <p key={key}>{titulo}, cantidad: {cantidad}</p>
+                  <div className={estilos.productToBuy} key={key}>
+                    <span className={estilos.amount}>{cantidad}</span>
+                    <span className={estilos.description}>{titulo}</span>
+                  </div>
                 ))}
             </Box>
           </Box>
