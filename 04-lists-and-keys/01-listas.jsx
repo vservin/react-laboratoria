@@ -1,15 +1,23 @@
-const numbers = [1, 2, 3, 4, 5];
-const doubled = numbers.map((number) => number * 2);
-console.log(doubled);
+const numeros = [1, 2, 3, 4, 5];
+const dobles = numeros.map((num) => num * 2);
+console.log(dobles);
 
-const items = ["Leche", "Jamón", "Vino tinto", "Queso suizo", "Croutones"];
+function ListaDeSuper(props) {
+  const { porComprar } = props
+  const elementosDeLista = porComprar.map((item, index) => 
+    <li key={`${index}${item}`}>{item}</li>
+  );
+  return <ul>{elementosDeLista}</ul>;
+}
+
+const miLista = ["Leche", "Jamón", "Vino tinto", "Queso suizo", "Croutones"];
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<div>
-  <ul>
-    {/* 😨 Funciona pero da un error? 😨 */}
-    {/* {items.map(item => <li>{item}</li>)} */}
+root.render(
+  <div>
+    {/* 😨 Funciona pero... ¿Da un error en consola? 😨 */}
+    {/* <ul>{miLista.map(item => <li>{item}</li>)}</ul> */}
 
-    {items.map((item, index) => <li key={index}>{item}</li>)}
-  </ul>
-</div>);
+    <ListaDeSuper porComprar={miLista} />
+  </div>
+);
