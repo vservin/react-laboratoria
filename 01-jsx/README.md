@@ -2,6 +2,7 @@
 Tema anterior: [README.md principal](./../README.md)
 Tema siguiente: [2 Componentes](./../02-components)
 
+---
 La extensión JSX se refiere a Extensión de sintáxis de JavaScript o JavaScript XML, haciendo referencia a la extensión del lenguaje JavaScript que introduce React. JSX puede recoirdarnos a un lenguaje de plantillas, pero con todo el poder y potencial de JS.
 React adapta el hecho que la lógica para renderizar esta inherentemente unida con diversa lógica de las interfaces de usuario:
 - Cómo los eventos se manejan.
